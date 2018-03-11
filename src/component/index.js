@@ -1,9 +1,12 @@
 import React, {Component} from 'react'
 import moment from 'moment'
 import config from './config.defaults.json';
-
+import Icon from 'react-icons-kit';
+import { iosPartlysunnyOutline, androidSunny, iosSnowy } from 'react-icons-kit/ionicons';
+import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, ReferenceLine,
+    ReferenceDot, Tooltip, CartesianGrid, Legend, Brush, ErrorBar, AreaChart, Area,
+    Label, LabelList } from 'recharts';
 import ('./style.css');
-
 const AWSIoTClient = require('./utils/AWSIoTClient');
 const uuid = require('uuid/v1');
 const appConfig = require('./config.defaults');
@@ -32,6 +35,19 @@ const visualRecognitionTypes = [
 const gesturesRecognitionTypes = [
   'matrix-palm-detected',
   'matrix-fist-detected'
+];
+
+const data = [
+    { name: 'Page A', uv: 1000, pv: 2400, amt: 2400, uvError: [75, 20] },
+    { name: 'Page B', uv: 300, pv: 4567, amt: 2400, uvError: [90, 40] },
+    { name: 'Page C', uv: 280, pv: 1398, amt: 2400, uvError: 40 },
+    { name: 'Page D', uv: 200, pv: 9800, amt: 2400, uvError: 20 },
+    { name: 'Page E', uv: 278, pv: null, amt: 2400, uvError: 28 },
+    { name: 'Page F', uv: 189, pv: 4800, amt: 2400, uvError: [90, 20] },
+    { name: 'Page G', uv: 189, pv: 4800, amt: 2400, uvError: [28, 40] },
+    { name: 'Page H', uv: 189, pv: 4800, amt: 2400, uvError: 28 },
+    { name: 'Page I', uv: 189, pv: 4800, amt: 2400, uvError: 28 },
+    { name: 'Page J', uv: 189, pv: 4800, amt: 2400, uvError: [15, 60] },
 ];
 
 class ASMDashboard extends Component {
@@ -131,6 +147,15 @@ class ASMDashboard extends Component {
   render() {
     return (
       <div>
+          {/*weather box container*/}
+          <div className={"weatherBoxContainer"}>
+              <div className={"temperatureContainer"}>
+                <div>  <Icon icon={iosSnowy} size={50} /></div>
+              <div>{this.state['matrix-temperature'].toString()}</div>
+              </div>
+
+          </div>
+          {/*end of weather box container*/}
         <div className="sensorData grey">
           <table>
             <tbody>

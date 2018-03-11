@@ -9,3 +9,24 @@
 .time {
     font-size: 110px;
 }
+
+
+.weatherBoxContainer {
+    margin: 10px;
+    border: 3px dotted lightgray;
+    width: 300px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    color: #999999;
+}
+.temperatureContainer{
+    flex-direction: row;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+}
