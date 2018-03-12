@@ -25,6 +25,7 @@
     "electron-updater": "^2.17.8",
     "moment": "^2.20.1",
     "node-notifier": "^5.1.2",
+    "react-typist": "^2.0.4",
     "recharts": "^1.0.0-beta.10",
     "uuid": "^3.2.1"
   },

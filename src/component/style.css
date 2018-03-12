@@ -10,10 +10,47 @@
     font-size: 110px;
 }
 
+.container{
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
+    color: #999999;
+}
+.leftScreenContainer{
+    width: 32%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    color: #999999;
+}
+.centerScreenContainer{
 
+    width: 32%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: #999999;
+}
+.rightScreenContainer{
+    width: 32%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+
+    color: #999999;
+}
 .weatherBoxContainer {
-    margin: 10px;
-    border: 3px dotted lightgray;
+    border: 1px dotted lightgray;
     width: 300px;
     height: 150px;
     display: flex;
@@ -28,5 +65,207 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: aqua;
+    color: #c6fff6;
+
+}
+.temperatureText{
+    font-size: larger;
+    color: #999999;
+}
+.otherWeatherDataContainer{
+    width: 110px;
+    height: 140px;
+    display: flex;
+    border-left: 1px dotted lightgray;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #999999;
+    padding: 5px;
+}
+
+.HumidityContainer{
+    flex-direction: row;
+    flex: 1;
+    width:100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #c2ebff;
+
+
+}
+.weatherBoxTextRight{
+color: #999999;
+    text-align: right;
+}
+.iconContainer
+{
+    color: #b1bdff;
+}
+.uvLightContainer{
+    width: 130px;
+    height: 150px;
+    display: flex;
+    border: 1px dotted lightgray;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fffe7b;
+    margin-top: 30px;
+}
+.uvLightSeparator{
+
+    width: 100%;
+    display: flex;
+    border-bottom: 1px dotted lightgray;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #999999;
+}
+.uvLightTextContainer{
+    width: 120px;
+    height: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 10px;
+}
+.uvLightText{
+    font-size: 10px;
+    align-items: flex-start;
+    display: flex;
+    color: #999999;
+}
+
+.faceDemographicsContainer
+{
+    width: 120px;
+    height: 120px;
+    display: flex;
+    border: 1px dotted lightgray;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.faceDemographicsTextContainer{
+    width: 110px;
+    display: flex;
+    padding-top: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.faceDemographicsText{
+    font-size: 10px;
+    align-items: flex-start;
+    display: flex;
+}
+
+.soundImage {
+    padding: 5px;
+    background-image: url("./img/soundwave.png");
+    width: 200px;
+    height: 100px;
+    background-size: cover;
+}
+
+.voiceRecognitionContainer
+{
+    width: 250px;
+    height: 120px;
+    display: flex;
+    margin-top: 100px;
+    border: 0px dotted lightgray;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.recognitionTrain{
+    width: 130px;
+    height: 150px;
+    display: flex;
+    border: 1px dotted lightgray;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.recognitionTrainText{
+    font-size: 12px;
+    align-items: flex-start;
+    display: flex;
+    margin-top: 10px;
+    padding:3px;
+}
+.recognitionRecognized{
+    margin-top: 20px;
+    width: 130px;
+    height: 150px;
+    display: flex;
+    border: 1px dotted lightgray;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.recognitionRecognizedImage{
+    width: 70px;
+    height: 70px;
+    opacity: 1;
+    display: flex;
+    background-image: url("./img/faceReco.png");
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.recognitionTrainIcon{
+ color: #ddebff;
+}
+.recognitionFistImage{
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+    display: flex;
+    background-image: url("./img/fist.png");
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.iconBox{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 130px;
+    margin-bottom: 20px;
+}
+
+.signal {
+    border: 5px solid #b1bdff;
+    border-radius: 30px;
+    height: 30px;
+    opacity: 0;
+    position: relative;
+    margin-bottom: 20px;
+    width: 30px;
+    animation: pulsate 3s ease-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(.1);
+        opacity: 0.0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
 }
