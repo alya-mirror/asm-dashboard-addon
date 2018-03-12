@@ -264,19 +264,8 @@ class ASMDashboard extends Component {
           <div className="voiceRecognitionContainer">
             <div className="soundImage">
             </div>
-            <div>
-              <Typist
-                className="TypistExample-message"
-                cursor={{
-                  show: true,
-                  blink: true,
-                  element: '|',
-                  hideWhenDone: false,
-                  hideWhenDoneDelay: 1000,
-                }}
-              ><Typist.Delay ms={1250}/>
-                <span>{this.state['matrix-voice-command']}</span>
-              </Typist>
+            <div class="typewriter">
+              <h3>{this.state['matrix-voice-command']}</h3>
             </div>
           </div>
         </div>
