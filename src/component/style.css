@@ -9,7 +9,9 @@
 .time {
     font-size: 110px;
 }
-
+body{
+    background: #333;
+}
 .container{
     padding: 20px;
     width: 100%;
@@ -19,6 +21,9 @@
     flex-direction: row;
     justify-content: flex-start;
     color: #999999;
+    background: #333;
+//padding-top: 5em;
+
 }
 .leftScreenContainer{
     width: 32%;
@@ -154,9 +159,10 @@ color: #999999;
     width: 110px;
     display: flex;
     padding-top: 5px;
+    padding-left: 20px;
     justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    align-items: flex-start;
+    flex-direction: column;
 }
 .faceDemographicsText{
     font-size: 10px;
@@ -198,7 +204,7 @@ color: #999999;
     font-size: 12px;
     align-items: flex-start;
     display: flex;
-    margin-top: 10px;
+    margin-top: 5px;
     padding:3px;
 }
 .recognitionRecognized{
@@ -271,12 +277,6 @@ color: #999999;
 }
 
 /* GLOBAL STYLES */
-body {
-    background: #333;
-    padding-top: 5em;
-    display: flex;
-    justify-content: center;
-}
 
 /* DEMO-SPECIFIC STYLES */
 .typewriter h3 {
@@ -288,7 +288,7 @@ body {
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15em; /* Adjust as needed */
     animation:
-            typing 3.5s steps(30, end),
+            typing 3s steps(40) 5s 2 normal both, /*if you didn't like the repeating delete number 2 or increase it to 10 times*/
             blink-caret .5s step-end infinite;
 }
 
@@ -296,6 +296,7 @@ body {
 @keyframes typing {
     from { width: 0 }
     to { width: 100% }
+
 }
 
 /* The typewriter cursor effect */
