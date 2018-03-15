@@ -216,7 +216,7 @@ describe('App', function () {
     it("send test voice command data", (done) => {
       return awsIoTClient.publish('alya-data', {
         dataType: 'matrix-voice-command',
-        data: 'alya hi'
+        data: 'alya bilal'
       }, {}, () => {
         done();
       });
