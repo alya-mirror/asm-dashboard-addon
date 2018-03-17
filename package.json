@@ -1,6 +1,6 @@
 {
-  "name": "asm-dasboard-addon",
-  "version": "0.0.1",
+  "name": "@alya-mirror/asm-dasboard-addon",
+  "version": "0.0.2",
   "description": "A react component that shows all data inside alya-smart-mirror",
   "engines": {
     "node": ">=6.0.0"
@@ -16,6 +16,7 @@
     "clean": "nwb clean-module",
     "test": "react-scripts test --env=jsdom",
     "electron-start": "react-scripts start",
+    "publish": "npm publish --access public",
     "dev": "concurrently \"cross-env BROWSER=none yarn electron-start\" \"wait-on http://localhost:3000 && electron .\""
   },
   "dependencies": {

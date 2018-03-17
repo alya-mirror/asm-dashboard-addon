@@ -50,21 +50,5 @@ yarn test
 
 
 ```
-npm publish
-```
-
-## known issues
-- Directory path will always resolve relative to the electron.js file. A workaround is to use path.resolve. Example below:
-
-```
-const path = window.require('path')
-// I search for a file inside src/component/utils/certs , then use below code:
-const certsFolderPath = path.resolve('src/component/utils/certs');
-console.log(certsFolderPath) // /Users/xxxxx/alya/asm-date-time/src/component/utils/certs
-```
-
-- To require an npm module from a react component, do like:
-
-```
-const path = window.require('path')
+yarn publish
 ```
